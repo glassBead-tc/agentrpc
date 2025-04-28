@@ -1,0 +1,42 @@
+{
+  "tools": [
+    {
+      "name": "getWeather",
+      "description": "Return weather information at a given location",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The location to get weather for"
+          }
+        },
+        "required": ["location"]
+      },
+      "handler": "weather.getWeather"
+    },
+    {
+      "name": "calculateSum",
+      "description": "Calculate the sum of two numbers",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "number",
+            "description": "First number"
+          },
+          "b": {
+            "type": "number",
+            "description": "Second number"
+          }
+        },
+        "required": ["a", "b"]
+      },
+      "handler": "math.calculateSum"
+    }
+  ],
+  "server": {
+    "port": 8080,
+    "host": "localhost"
+  }
+}
